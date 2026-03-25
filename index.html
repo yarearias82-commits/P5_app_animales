@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>App de Animales</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+   
+}
+body{
+   background: linear-gradient( #09f8ec,#09f8ec);
+    margin:400; 
+}
+
+.pantalla{
+    display: none;
+    padding: 20px;
+}
+
+.activa{
+    display: block;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+img{
+    width: 200px;
+    margin: 10px;
+}
+</style>
+
+<script>
+function mostrarPantalla(id){
+    let pantallas = document.getElementsByClassName("pantalla");
+    for(let i=0; i<pantallas.length; i++){
+        pantallas[i].classList.remove("activa");
+    }
+    document.getElementById(id).classList.add("activa");
+}
+</script>
+
+</head>
+
+
+<body>
+
+
+<div id="menu" class="pantalla activa">
+    <h1>App de Animales</h1>
+    <h3>Alumno: ivon hernandez</h3>
+
+    <button onclick="mostrarPantalla('abeja')">Abeja</button>
+    <button onclick="mostrarPantalla('mariposa')">Mariposa</button>
+    <button onclick="mostrarPantalla('gato')">Gato</button>
+</div>
+
+
+<div id="abeja" class="pantalla">
+    <h2>La Abeja</h2>
+    <img src="IMG-20260321-WA0025.jpg">
+    <p>
+        La Abeja: Un Insecto Fascinante <br><br>
+
+    La abeja es un insecto volador que se encuentra en 
+    casi todo el mundo. <br>
+    Son conocidas por su papel 
+    crucial en la polinización de plantas y 
+    la producción de miel.<br>
+     Las abejas viven en colonias, con 
+    una reina que pone huevos y
+    miles de trabajadoras que se encargan de
+    cuidar a las crías y <br>recolectar néctar y polen. 
+    Son insectos sociales y
+    comunicativos, que se <br>SSScomunican a través de danzas y feromonas.<br> 
+    ¡Son verdaderas maravillas de la naturaleza!
+    </p>
+
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+
+<div id="mariposa" class="pantalla">
+    <h2>La Mariposa</h2>
+    <img src="IMG-20260321-WA0024.jpg">
+    <p>
+       La Mariposa: Un Símbolo de Transformación <br><br>
+
+    La mariposa es un insecto volador que se caracteriza por sus alas coloridas<br>
+     y delicadas. Nacen como huevos, se convierten en orugas, luego en pupas y finalmente<br>
+      emergen como mariposas adultas. Son polinizadoras importantes y se alimentan del <br>
+      néctar de las flores. Su ciclo de vida es un ejemplo de transformación y renovación. <br>
+      ¡Son criaturas hermosas y fascinantes!
+    </p>
+
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+<div id="gato" class="pantalla">
+    <h2>El Gato</h2>
+    <img src="IMG-20260321-WA0023.jpg">
+    <p>
+       El Gato: Un Compañero Feline 😊<br><br>
+
+      El gato es un mamífero carnívoro que ha sido domesticado por humanos<br>
+       durante miles de años. Son conocidos por su agilidad, independencia y <br>
+       afecto hacia sus dueños. Los gatos son cazadores nocturnos y tienen sentidos<br>
+        agudos, especialmente la vista y el oído. Son populares como mascotas debido a <br>
+        su baja mantenimiento y personalidad única. <br>
+        ¡Son verdaderos compañeros felinos!
+    </p>
+
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+</body>
+</html>
